@@ -4,6 +4,9 @@ proxy:
     - identidock
   ports:
     - "80:80"
+  environment:
+    - NGINX_HOST=192.168.0.105
+    - NGINX_PROXY=http://identidock:9090
 identidock:
   image: dockertonywu/identidock:0.1
   environment:
